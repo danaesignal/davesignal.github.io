@@ -373,7 +373,7 @@ section {
 
 #about {
   color: #1C1C1F;
-  margin-bottom: 25px; }
+  margin-bottom: 1.5rem; }
   #about .card {
     display: flex;
     flex-direction: row;
