@@ -1,0 +1,173 @@
+@import '_normalize.scss';
+
+$cararra: #EDEFEA;
+$gunsmoke: #8C9594;
+$hemlock: #686A41;
+$battleship: lighten(#82897A, 10%);
+$shark: #1C1C1F;
+
+* {
+  font-family: 'Saira Semi Condensed', sans-serif;
+  box-sizing: border-box;
+}
+html {
+  background: $cararra;
+  color: $shark;
+}
+
+h2, h3, h4 {
+  margin: 10px 0 10px 0;
+}
+
+#divider {
+  height: 2px;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+header {
+  background: $battleship;
+  color: $cararra;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 1.5rem 0;
+  #divider {
+    background: $cararra;
+    width: 15rem;
+  }
+  box-shadow: 0px 0px 5px $shark;
+}
+
+#main {
+  max-width: 810px;
+  padding: 0 5px;
+  margin: 0 auto;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 35px;
+  color: $shark;
+
+  h2 {
+    text-align: center;
+  }
+
+  #divider {
+    background: $gunsmoke;
+    width: 12rem;
+    margin: 0 auto;
+  }
+
+  .card {
+    margin-top: 40px;
+    background: lighten($battleship, 28%);
+    box-shadow: 2px 2px 5px $gunsmoke;
+    padding: 10px;
+    a {
+      color: $shark;
+      text-decoration: none;
+      transition: color 175ms ease-in-out;
+    }
+    a:hover {
+      color: $hemlock;
+    }
+  }
+
+}
+
+#featured-project {
+  img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 2px 2px 5px $shark;
+    border: 3px solid hsla(0,0,0,0%);
+    border-radius: 3px;
+    transition: border 175ms ease-in-out;
+  }
+  img:hover {
+    border: 3px solid $hemlock;
+  }
+  .story {
+    margin-top: 20px;
+  }
+}
+
+#about {
+  color: $shark;
+  margin-bottom: 25px;
+  div {
+  }
+  .card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .image {
+    max-width: 175px;
+    border-radius: 50%;
+    img {
+      max-width: 100%;
+      height: auto;
+      box-shadow: 1px 1px 7px lighten($shark, 10%);
+      border: 3px solid hsla(0,0,0,0%);
+      border-radius: 50%;
+    }
+    @media (min-width: 700px) {
+      width: calc(25% - 20px);
+      margin-right: 20px;
+    }
+  }
+
+  .story {
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 100%;
+    height: 100%;
+    @media (min-width: 700px){
+      width: calc(75% - 20px);
+    }
+  }
+}
+
+#contact {
+  width: 80%;
+  height: 90px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  div {
+    margin: 10px;
+  }
+  .image-link {
+    height: 64px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+#github {
+  width: 64px;
+  background: url('./img/GitHub-Mark-64px.png');
+  background-size: contain;
+}
+
+#linkedin {
+  width: 64px;
+  background: url('./img/LI-In-Bug.png');
+  background-size: contain;
+  align-self: flex-end;
+}
+
+#email {
+  width: 45px;
+  background: url('./img/ampersand.png');
+  background-size: cover;
+  align-self: flex-end;
+}
